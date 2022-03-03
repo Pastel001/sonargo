@@ -106,6 +106,7 @@ func (s *ProjectAnalysesService) DeleteEvent(opt *ProjectAnalysesDeleteEventOpti
 }
 
 type ProjectAnalysesSearchOption struct {
+	Branch   string `url:"branch,omitempty"`   // Description:"Branch key. Not available in the community edition.",ExampleValue:"feature/my_branch"
 	Category string `url:"category,omitempty"` // Description:"Event category. Filter analyses that have at least one event of the category specified.",ExampleValue:"OTHER"
 	From     string `url:"from,omitempty"`     // Description:"Filter analyses created after the given date (inclusive). <br>Either a date (server timezone) or datetime can be provided",ExampleValue:"2013-05-01"
 	P        int    `url:"p,omitempty"`        // Description:"1-based page number",ExampleValue:"42"
